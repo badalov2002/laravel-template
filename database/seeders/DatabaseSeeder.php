@@ -13,7 +13,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            \Database\Seeders\Users\AdminSeeder::class,
+            Users\AdminSeeder::class,
+            Features\Languages\DefaultLanguage::class
         ]);
     }
 }
