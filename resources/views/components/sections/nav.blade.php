@@ -44,12 +44,13 @@
 
         <!-- Right Section -->
         <div class="space-x-1">
+            <x-helpers.languages />
+            <x-helpers.user-dropdown />
+
             <!-- Toggle Sidebar -->
             <button type="button" class="btn btn-sm btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
                 <i class="fa fa-fw fa-bars"></i>
             </button>
-
-            <x-helpers.user-dropdown />
         </div>
     </div>
 </header>

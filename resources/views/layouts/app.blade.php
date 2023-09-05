@@ -6,7 +6,7 @@
         <!-- Main Container -->
         <main id="main-container" style="padding-top: 68px;">
             <!-- Page Content -->
-            <div class="bg-body-extra-light">
+            <div>
                 <x-helpers.breadcrumb />
 
                 <!-- Content -->
