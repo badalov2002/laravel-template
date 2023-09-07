@@ -12,9 +12,22 @@ class DefaultLanguage extends Seeder
      */
     public function run(): void
     {
-        Language::create([
-            'slug' => 'en',
-            'title' => 'English'
-        ]);
+        $data = [
+            [
+                'slug' => 'en',
+                'title' => 'English'
+            ],
+            [
+                'slug' => 'ru',
+                'title' => 'Русский'
+            ],
+        ];
+
+        foreach ($data as $item) {
+            Language::create([
+                'slug' => $item['slug'],
+                'title' => $item['title']
+            ]);
+        }
     }
 }

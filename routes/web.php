@@ -26,4 +26,6 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
             Route::get('/', [\App\Http\Controllers\Dashboard\Features\Languages\LanguageController::class, 'index'])->name('index');
         });
     });
+
+    Route::get('change-language/{language}', [\App\Http\Controllers\Dashboard\Features\Languages\ChangeLanguageController::class, 'change'])->name('change-language');
 });

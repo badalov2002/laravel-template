@@ -8,7 +8,7 @@
         <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown" style="min-width: auto;">
             <div class="p-2">
                 @foreach($languages as $language)
-                    <a class="dropdown-item d-flex align-items-center justify-content-between @if($loop->last) mb-0 @endif" href="">
+                    <a class="dropdown-item d-flex align-items-center justify-content-between @if($loop->last) mb-0 @endif" href="{{ route('change-language', $language->slug) }}">
                         <span>{{ $language->title }}</span>
                         <i class="fa fa-fw fa-earth opacity-25 ms-2"></i>
                     </a>
