@@ -18,6 +18,14 @@ class LanguageRepository implements RepositoryInterface
         return Language::first();
     }
 
+    public function getFiltered($search)
+    {
+        return Language::select('id', 'slug', 'title', 'thumbnail', 'created_at')
+            ->when($search, function ($query, $search) {
+                return $query->where('title', 'like', '%' . $search . '%');
+            })->get();
+    }
+
     public function getCurrent()
     {
         return Language::where('slug', app()->getLocale())->pluck('title')->first();

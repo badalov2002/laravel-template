@@ -12,15 +12,15 @@ class Input extends Component
      * Create a new component instance.
      */
     public function __construct(
-        private readonly string $type,
-        private readonly string $model,
-        private readonly string $text,
-        private readonly string|null $placeholder = null,
-        private readonly string|null $value = null,
-        private readonly bool $autocomplete = false,
-        private readonly bool $wire = false,
-        private readonly bool $error = false,
-        private readonly bool $required = false,
+        protected string $type,
+        protected string $model,
+        protected string $text,
+        protected string|null $placeholder = null,
+        protected string|null $value = null,
+        protected bool $autocomplete = false,
+        protected bool $wire = false,
+        protected bool $error = false,
+        protected bool $required = false,
     ) {
         //
     }

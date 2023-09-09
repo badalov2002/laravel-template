@@ -11,9 +11,7 @@ class Upload
         protected string $folder,
         protected $model = null,
         protected $modelColumn = null,
-    )
-    {
-    }
+    ) { }
 
     public function uploadMedia()
     {
